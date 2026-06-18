@@ -16,4 +16,5 @@
 #5. Write pseudo code before write real code.
 
 
-Remove Duplicates : 33:52
+**Brutforce approach :** Try out of all the possible combination.
+
