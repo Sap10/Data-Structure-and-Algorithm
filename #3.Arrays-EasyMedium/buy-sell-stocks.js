@@ -21,25 +21,17 @@
 // }
 
 function maxProfit(prices){
-    let buyStockIndex = null;
-    let sellStockIndex = null;
-    if(prices.length <= 1) return 0;
+    let buyStockPrice = prices[0];
+    let maxProfit = 0;
     for(let i = 0; i < prices.length; i++){
-        if(buyStockIndex == null) {
-            buyStockIndex = i;
-        }else if ((prices[i] < prices[buyStockIndex]) && (i < sellStockIndex)){
-            buyStockIndex = i;
+        if(maxProfit < (prices[i] - buyStockPrice)){
+            maxProfit = prices[i] - buyStockPrice;
         }
-
-        if(sellStockIndex == null) {
-            sellStockIndex = i;
-        }else if((prices[i] > prices[sellStockIndex]) && (i > buyStockIndex)){
-            sellStockIndex = i;
+        if(buyStockPrice > prices[i]){
+            buyStockPrice = prices[i];
         }
-        console.log(sellStockIndex, buyStockIndex);
     }
-
-    return (prices[sellStockIndex] - prices[buyStockIndex]) < 0 ? 0 : prices[sellStockIndex] - prices[buyStockIndex];
+    return maxProfit;
 }
 
 console.log(maxProfit([7, 1, 5, 3, 6, 4]));
