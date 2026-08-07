@@ -2,6 +2,8 @@
  * Move zeros : https://leetcode.com/problems/move-zeroes/
  */
 
+//my first solution
+
 function moveZeros(nums){
     if (nums.lngth <= 1) return;
     let indexOfZeroElement = null;
@@ -14,11 +16,6 @@ function moveZeros(nums){
             if(indexOfZeroElement == null) continue;
             nums[indexOfZeroElement] = nums[i];
             nums[i] = 0;
-            // if(nums[i - 1] == 0){
-            //     indexOfZeroElement = i - 1;
-            // }else{
-            //     indexOfZeroElement = i;
-            // }
             while (indexOfZeroElement < i){
                 indexOfZeroElement++;
                 if (nums[indexOfZeroElement] == 0) break;
@@ -28,7 +25,24 @@ function moveZeros(nums){
     console.log(nums);
 }
 
-moveZeros([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
+//moveZeros([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
 
+//more optimize simple solution
+
+function moveZeros2(nums){
+    let replacementIndex = 0;
+    for(let i = 0; i < nums.length; i++){
+        if(nums[i] !== 0){
+            nums[replacementIndex] = nums[i];
+            replacementIndex++;
+        }
+    }
+    for(let i = replacementIndex; i < nums.length; i++){
+       nums[i] = 0; 
+    }
+    console.log(nums);
+}
+
+moveZeros2([4, 2, 4, 0, 0, 3, 0, 5, 1, 0]);
 
 //17:11
