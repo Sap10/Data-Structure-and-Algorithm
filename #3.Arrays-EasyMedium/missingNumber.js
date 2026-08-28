@@ -2,20 +2,24 @@
  * https://leetcode.com/problems/missing-number/description/
  * 
  * @param {number[]} nums
- * @return {numbr}
+ * @return {number}
  * 
  */
 
-function returnMissingNumbs(nums){
-    let isnumbExists;
-    for(let i = 0; i < nums.length; i++){
-        isnumbExists = nums.includes(nums[i]);
-        if(!isnumbExists){
-            console.log('test');
-            console.log(nums[i]);
-            return nums[i]; 
-        }
-    } 
-}
+// function returnMissingNumbs(nums){
+//     let isnumbExists;
+//     for(let i = 0; i <= nums.length; i++){
+//         isnumbExists = nums.includes(i);
+//         if(!isnumbExists){
+//             return i; 
+//         }
+//     } 
+// }
 
-console.log(returnMissingNumbs([3, 0, 1]));
+//On the above function we used "includes" function, but we need to do this without using any inbuild function
+
+//10:38
+
+//console.log(returnMissingNumbs([3, 0, 1]));
+//console.log(returnMissingNumbs([0, 1]));
+console.log(returnMissingNumbs([9, 6, 4, 2, 3, 5, 7, 0, 1]));
