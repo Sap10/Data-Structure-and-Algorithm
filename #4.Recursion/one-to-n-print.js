@@ -6,16 +6,15 @@
  * 
  */
 
-function printOneToN(n){
-    let numb = 1;
+function printOneToN(numb){
+    let n = 8;
     console.log(numb);
-    numb = numb + 1;
-
     if(numb === n){
         return;
     }else{
+        ++numb;
         printOneToN(numb);
     }
 }
 
-printOneToN(8);
+printOneToN(1);
