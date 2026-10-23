@@ -33,3 +33,5 @@ function sumOfFirstNnumb2(limit){
 let test2 = sumOfFirstNnumb2(10);
 
 console.log(test2, '2nd method');
+
+//The above function is example of recursion tree.
