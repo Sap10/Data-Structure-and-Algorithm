@@ -22,7 +22,8 @@ function sumOfAllNumb(array, index = 0){
  * 
  * 23-10-2026 : Seems like that if we use 2 parameter array and index, then we may achive this functionality.
  * 
+ * 24-10-2026 : Actually we can write better logic that to set the parameter as an array length, which is comperatively better approach than set index as parameter
+ * 
  */
 
-let sum = sumOfAllNumb([1, 2, 3, 4, 5]);
-console.log(sum);
+console.log(sumOfAllNumb([1, 2, 3, 4, 5]));
