@@ -26,4 +26,24 @@ function sumOfAllNumb(array, index = 0){
  * 
  */
 
-console.log(sumOfAllNumb([1, 2, 3, 4, 5]));
+//console.log(sumOfAllNumb([1, 2, 3, 4, 5]));
+
+/**
+ * Set the parameter as array length.
+ * 
+ * @param {array[]} 
+ * @param {number} - array length
+ * 
+ * @returns {number} - sum of all odd numbers in array
+ * 
+ */
+
+let array2 = [1, 2, 3, 4, 5];
+
+function sumArr(arr, numb){
+    console.log(arr, numb);
+    if(numb === 0) return arr[numb];
+    return arr[numb] + sumArr(arr, numb - 1);
+}
+
+console.log(sumArr(array2, (array2.length - 1)));
