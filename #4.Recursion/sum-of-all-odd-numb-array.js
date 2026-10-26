@@ -8,9 +8,10 @@
  */
 
 function sumAllOddNumbWithinArr(arr, ArrIndex){
-    if(ArrIndex === 0) return arr[0];
-    if((arr[ArrIndex] % 2) === 0) return sumAllOddNumbWithinArr(arr, ArrIndex - 1);
-    return arr[ArrIndex] + sumAllOddNumbWithinArr(arr, ArrIndex - 1);
+    let isOdd = ((arr[ArrIndex] % 2) !== 0);
+    if(ArrIndex === 0) return isOdd ? arr[0] : 0;
+    if(!isOdd) return sumAllOddNumbWithinArr(arr, ArrIndex - 1);
+    else return arr[ArrIndex] + sumAllOddNumbWithinArr(arr, ArrIndex - 1);
 }
 
 console.log(sumAllOddNumbWithinArr([5,2,4,3,6,1], 5));
