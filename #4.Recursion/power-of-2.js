@@ -20,4 +20,13 @@ function isPowerOfTwo(n){
 
 //console.log(isPowerOfTwo(3));
 
-//For a better optimize code can change our code like the following way:
+//For a better optimization we can change our code like the following way:
+
+function isPowerOfTwo2(n){
+    if(n === 1) return true;
+    else if((n % 2) !== 0 || (n < 1)) return false;
+
+    return isPowerOfTwo2(n/2);
+}
+
+console.log(isPowerOfTwo2(8));
