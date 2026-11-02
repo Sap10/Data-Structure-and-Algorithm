@@ -37,3 +37,8 @@
 *#2. Trees and Graphs*
 
 *#3. Backtracking, DP, Divide & Conquer*
+
+**Time complexity of recursion :** *O(2^n)*
+*This time complexity is very bad, to improve this time complexity we will use dynamic programming.*
+
+*Q. We have 2 rabbits, every month they multiple by 2 of their population.how many rabbits of the nth month?*

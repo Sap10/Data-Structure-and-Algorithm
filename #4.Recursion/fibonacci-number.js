@@ -10,6 +10,13 @@
  * #1. Iterative approach (top down approach)
  * #2. Recursive approach (bottom up approach)
  * 
- * 
- * 
+ * @param {number} n
+ * @returns {number} 
  */
+
+function fibonacci(n){
+    if(n <= 1) return n;
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+console.log(fibonacci(5));
