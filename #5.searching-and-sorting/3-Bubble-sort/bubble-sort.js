@@ -14,4 +14,10 @@
  *  .
  *  nth iteration : 1 times get smellest number at 1st position.
  *
+ * 
+ *  time complexity : O(n^2)
+ * 
+ *  space complexity : O(1)
+ * 
  */
+
