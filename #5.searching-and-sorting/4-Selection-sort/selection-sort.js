@@ -16,3 +16,37 @@
  *  The n'th element we did not need to sort as this is already sorted.
  *  
  */
+
+
+function selectionSort(arr){
+    let length = arr.length;
+    for(let i = 0; i < length - 1; i++){
+        let min = i;
+        for(let j = i + 1; j < length; j++){
+            if(arr[min] > arr[j]){
+                min = j;
+            }
+        }
+        if(min !== i){
+           let temp = arr[i];
+           arr[i] = arr[min];
+           arr[min] = temp; 
+        }
+    }
+    return arr;
+}
+
+console.log(selectionSort([2,9,0,-10,5,2]));
+
+
+/**
+ * Time complexity : O(n^2)
+ * 
+ * Space complexity : O(1)
+ * 
+ * 
+ * Why name it Selection sort ?
+ * --> We are selecting the minimum and putting it's into it's place.
+ * 
+ * 
+ */
